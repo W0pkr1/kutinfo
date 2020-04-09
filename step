@@ -4,21 +4,23 @@ pinMode(13, OUTPUT);
 pinMode(12, OUTPUT);
 pinMode(11, OUTPUT);
 pinMode(10, OUTPUT);
+pinMode(9, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
 
-   int k=3;
+
+   int k=4;
     for ( int i=0 ; i <= pow(2,k) ; i++){
     int x=i;
-    delay(500);
+    delay(750);
     digitalWrite(13,LOW);
     digitalWrite(12,LOW);
     digitalWrite(11,LOW);
     digitalWrite(10,LOW);
-    delay(500);
+    pinMode(9, OUTPUT);
+    delay(750);
         for (int j =k; j >=0; j--){
             if (x-pow(2,j)>=0){
                 x-=pow(2,j);
